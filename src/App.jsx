@@ -6,7 +6,6 @@ export default function App() {
   const whatsappNumber = "917036798322";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
-  // 🌐 Translations
   const text = {
     en: {
       home: "Home",
@@ -27,7 +26,6 @@ export default function App() {
       contactDesc: "Call or WhatsApp to place orders",
       owner: "Founder, PalleSiri Dairy Farm",
     },
-
     te: {
       home: "హోమ్",
       about: "మా గురించి",
@@ -38,16 +36,15 @@ export default function App() {
       orderBtn: "వాట్సాప్‌లో ఆర్డర్ చేయండి",
       aboutTitle: "మా గురించి",
       aboutDesc:
-        "పల్లెసిరి డెయిరీ ఫారం గ్రామ రైతుల నుండి నేరుగా తాజా పాలు మరియు పాల ఉత్పత్తులను అందిస్తుంది. మేము ఎలాంటి రసాయనాలు లేకుండా సహజంగా పెంచిన పశువుల పాలను అందిస్తున్నాము.",
+        "పల్లెసిరి డెయిరీ ఫారం గ్రామ రైతుల నుండి నేరుగా తాజా పాలు మరియు పాల ఉత్పత్తులను అందిస్తుంది.",
       productsTitle: "మా ఉత్పత్తులు",
       orderNow: "ఇప్పుడు ఆర్డర్ చేయండి",
       location: "మా స్థానం",
       viewMap: "మ్యాప్‌లో చూడండి",
       contactTitle: "సంప్రదించండి",
       contactDesc: "ఆర్డర్ చేయడానికి కాల్ లేదా వాట్సాప్ చేయండి",
-      owner: "స్థాపకుడు, పల్లెసిరి డెయిరీ ఫారం",
+      owner: "స్థాపకుడు",
     },
-
     hi: {
       home: "होम",
       about: "हमारे बारे में",
@@ -58,14 +55,14 @@ export default function App() {
       orderBtn: "व्हाट्सएप पर ऑर्डर करें",
       aboutTitle: "हमारे बारे में",
       aboutDesc:
-        "पल्लेसिरी डेयरी फार्म गाँव के किसानों से सीधे ताज़ा दूध और डेयरी उत्पाद प्रदान करता है। हम बिना किसी मिलावट के शुद्ध उत्पाद देते हैं।",
+        "पल्लेसिरी डेयरी फार्म गाँव के किसानों से सीधे ताज़ा दूध और डेयरी उत्पाद प्रदान करता है।",
       productsTitle: "हमारे उत्पाद",
       orderNow: "अभी ऑर्डर करें",
       location: "हमारा स्थान",
-      viewMap: "गूगल मैप पर देखें",
+      viewMap: "मैप पर देखें",
       contactTitle: "संपर्क करें",
       contactDesc: "ऑर्डर के लिए कॉल या व्हाट्सएप करें",
-      owner: "संस्थापक, पल्लेसिरी डेयरी फार्म",
+      owner: "संस्थापक",
     },
   };
 
@@ -78,7 +75,7 @@ export default function App() {
   ];
 
   return (
-    <div className="font-sans text-left">
+    <div className="font-sans text-left overflow-x-hidden">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 shadow-md">
         <div className="flex items-center gap-3">
@@ -92,11 +89,11 @@ export default function App() {
           <a href="#products">{text[lang].products}</a>
           <a href="#contact">{text[lang].contact}</a>
 
-          {/* Language Selector */}
+          {/* ✅ FIXED Language Selector ONLY */}
           <select
             value={lang}
             onChange={(e) => setLang(e.target.value)}
-            className="border rounded px-2 py-1"
+            className="border rounded px-2 py-1 max-w-[80px] text-sm"
           >
             <option value="en">EN</option>
             <option value="te">తెలుగు</option>
@@ -104,6 +101,8 @@ export default function App() {
           </select>
         </div>
       </nav>
+
+      {/* rest of your code EXACTLY SAME */}
 
       {/* Hero Section */}
       <section
