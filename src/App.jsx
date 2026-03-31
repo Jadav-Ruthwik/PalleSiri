@@ -77,13 +77,13 @@ export default function App() {
   return (
     <div className="font-sans text-left overflow-x-hidden">
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-4 shadow-md">
+      <nav className="flex flex-wrap justify-between items-center p-4 shadow-md">
         <div className="flex items-center gap-3">
           <img src="/logo.png" alt="PalleSiri Logo" className="h-20" />
           <h1 className="text-2xl font-bold text-green-700">PalleSiri Dairy</h1>
         </div>
 
-        <div className="space-x-4 flex items-center">
+        <div className="flex flex-wrap gap-3 items-center justify-end">
           <a href="#home">{text[lang].home}</a>
           <a href="#about">{text[lang].about}</a>
           <a href="#products">{text[lang].products}</a>
@@ -93,7 +93,7 @@ export default function App() {
           <select
             value={lang}
             onChange={(e) => setLang(e.target.value)}
-            className="border rounded px-2 py-1 max-w-[80px] text-sm"
+            className="border rounded px-2 py-1 text-sm w-auto"
           >
             <option value="en">EN</option>
             <option value="te">తెలుగు</option>
@@ -209,7 +209,7 @@ export default function App() {
           </div>
 
           {/* Owner */}
-          <div className="flex items-center justify-between p-6 shadow rounded-xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 shadow rounded-xl text-center md:text-left">
             <div>
               <h3 className="text-xl font-bold text-green-700">
                 Rathod Venkatesh
@@ -220,7 +220,7 @@ export default function App() {
             <img
               src="/owner.png"
               alt="Owner"
-              className="h-60 w-60 object-cover rounded-full"
+              className="h-32 w-32 md:h-60 md:w-60 object-cover rounded-full mx-auto md:mx-0"
             />
           </div>
         </div>
